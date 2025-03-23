@@ -1,5 +1,5 @@
 # Run tests in check section
-%bcond_with check
+%bcond_without check
 
 # https://github.com/darccio/mergo
 %global goipath		dario.cat/mergo
@@ -63,7 +63,6 @@ building other packages which use import path with
 
 %check
 %if %{with check}
-%gochecks -i %{goipath}
-#gochecks
+%gochecks
 %endif
 
